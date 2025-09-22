@@ -1,0 +1,253 @@
+@import url('reset.css');
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Black.woff2') format('woff2');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+body {
+    background: #ccc url(../images/background.png) no-repeat 50%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    color: #fff;
+}
+
+.wrapper {
+    background: #16151540;
+}
+
+.box {
+    width: 496px;
+    height: 760px;
+    background: rgba(233, 233, 233, 0.45);
+    margin-left: auto;
+}
+
+.container {
+    width: 340px;
+    margin: 0 auto;
+}
+
+.switch{
+    padding: 60px 80px;
+}
+
+.switch input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.switch label {
+    display: flex;
+    width: 340px;
+    height: 42px;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #325480;
+}
+
+.switch label::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 168px;
+    height: 36px;
+    background: #325480;
+    border-radius: 50px;
+    transition: all 0.3 linear;
+}
+
+.switch input:checked+label::before {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+.switch span {
+	font-weight: 400;
+	font-size: 12px;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+	flex: 1 1 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.menu h3 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu input{
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    margin: 15px auto;
+    width: 340px;
+    height: 44px;
+    background: #7C7C7C;
+    
+}
+
+input[type="e-mail"] {
+    padding: 15px 20px;
+}
+
+input[type="password"] {
+    padding: 15px 20px;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.menu input:focus::placeholder{
+    z-index: -1;
+    outline: none;
+    box-shadow: none;
+}
+
+.remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.remember a{
+    color: #fff;
+}
+
+.remember input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+
+}
+
+.remember label {
+	cursor: pointer;
+	margin: 20px 0;
+	display: inline-block;
+	padding: 5px 5px 5px 20px;
+	position: relative;
+    color: #325480;
+}
+
+.remember label::before {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border: 2px solid #325480;
+	border-radius: 2px;
+}
+
+.remember input:checked+label::before {
+	background: #325480;
+}
+
+.remember input:checked+label::after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 6px;
+	height: 12px;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(38deg);
+}
+
+.login {
+    background: #325480;
+    color: #fff;
+    border-radius: 50px;
+    width: 100%;
+    height: 44px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.login:checked:before{
+    content: '';
+    background-color: #3284f0;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    gap: 33px;
+    color: #325480;
+    margin-top: 35px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.register a{
+    color: #fff;
+}
+
+.last {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.last p {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    color: #325480;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.last svg {
+    width: 20px;
+    height: 20px;
+    color: #325480;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+}
