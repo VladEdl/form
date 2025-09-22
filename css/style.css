@@ -87,7 +87,7 @@ body {
     height: 36px;
     background: #325480;
     border-radius: 50px;
-    transition: all 0.3 linear;
+    transition: all 0.3s linear;
 }
 
 .switch input:checked+label::before {
