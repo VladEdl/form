@@ -43,11 +43,12 @@ body {
 
 .wrapper {
     background: #16151540;
+    height: 100vh;
 }
 
 .box {
     width: 496px;
-    height: 760px;
+    height: 100%;
     background: rgba(233, 233, 233, 0.45);
     margin-left: auto;
 }
